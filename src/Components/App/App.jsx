@@ -1,13 +1,28 @@
+import React, {useState} from 'react';
 import styles from './App.module.css';
 import SearchBar from '../SearchBar/SearchBar';
 import Playlist from '../Playlist/Playlist';
 import SearchResults from '../SearchResults/SearchResults';
-import Track from '../Track/Track';
-import Tracklist from '../Tracklist/Tracklist';
 
 
 function App() {
+  const [searchResults, setSearchResults] = useState([
+    {
+      name: "song1",
+      artist: "artist1",
+      album: "album1",
+      id: 1
+  },
+  {
+    name: "song2",
+    artist: "artist2",
+    album: "album2",
+    id: 2
+  }
+  ]);
+
   return (
+  
     <div className={styles.App}>
 
       <header className={styles["App-header"]}>
@@ -20,20 +35,19 @@ function App() {
         </p>
       </div>
 
-      <div className={styles["App-SearchResults"]}>
-        <p>Search results:</p>
-        <SearchResults />
-        <p>Tracklist:</p>
-        <Tracklist />
-        <p>Track:</p>
-        <Track />
-      </div>
 
-      <div className={styles["App-Playlist"]}>
-        <p>
-          Playlist:
-          <Playlist />
-        </p>
+      <div className={styles.Mainbox}>
+        <div className={styles["App-SearchResults"]}>
+          <p>Search results:</p>
+          <SearchResults userSearchResults={searchResults}/>
+        </div>
+
+        <div className={styles["App-Playlist"]}>
+          <p>
+            Playlist:
+            <Playlist />
+          </p>
+        </div>
       </div>
       
     </div>

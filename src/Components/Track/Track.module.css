@@ -1,7 +1,11 @@
 .Track {
     color: slateblue;
     border: 1px solid slateblue;
-    width: 150px;
+    width: 250px;
     text-align: center;
     margin: 0 auto;
+}
+
+.Track-info {
+    border: solid 3px coral
 }

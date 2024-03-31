@@ -18,5 +18,10 @@
   /* font-weight: 600; */
 }
 
+.Mainbox {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
 
 
