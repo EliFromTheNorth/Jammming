@@ -1,0 +1,22 @@
+.App {
+  height:60rem;
+  text-align: center;
+  color: green;
+  background-image: url('C:\Eli\Eli the Programmer\CodeCademy\Jammming\jammming\public\images\abstract-watercolor-guitar-exploding-with-colorful-motion-generated-by-ai.jpg');
+  background-size: cover;
+  background-position:top;
+  background-repeat: no-repeat;
+}
+
+.App-header {
+  color: purple;
+  padding: 20px;
+}
+
+.highlight {
+  color: plum;
+  /* font-weight: 600; */
+}
+
+
+
