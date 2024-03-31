@@ -7,9 +7,9 @@ function App() {
       <header className="App-header">
         {/* <img src={logo} className="App-logo" alt="logo" /> */}
         <p>
-          Edit HElllllookkkhjjfgfghgfhgfhookolcl.... <code>src/App.js</code> and save to reloadddddd.
+          Ubuntu still on strisakalalalaaaaa <code>src/App.js</code> and save to reloadddddd.
         </p>
-        <p>is this finally working?</p>
+        <p>is this fkinally working?</p>
         <p>env added</p>
         <a
           className="App-link"
