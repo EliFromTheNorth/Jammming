@@ -1,7 +1,8 @@
 .Search-Results {
     color: greenyellow;
     border: 1px solid greenyellow;
-    width: 250px;
+    width: 450px;
     text-align: center;
     margin: 0 auto;
+    background-color: rgba(236, 125, 55, 0.464);
 }

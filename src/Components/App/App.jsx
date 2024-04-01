@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import styles from './App.module.css';
 import SearchBar from '../SearchBar/SearchBar';
 import Playlist from '../Playlist/Playlist';
@@ -6,7 +6,7 @@ import SearchResults from '../SearchResults/SearchResults';
 
 
 function App() {
-  const [searchResults, setSearchResults] = useState([
+  const [searchResults, setSearchResults] = React.useState([
     {
       name: "song1",
       artist: "artist1",
@@ -19,7 +19,38 @@ function App() {
     album: "album2",
     id: 2
   }
-  ]);
+  ])
+
+  const [playlistName, setPlaylistName] = React.useState("Playlist Name")
+  const [playlistTracks, setPlaylistTracks] = React.useState([
+    {
+      name: "Playlist1",
+      artist: "playlist - Artist1",
+      album: "playlist - Album1",
+      id: 3
+    },
+    {
+      name: "Playlist2",
+      artist: "playlist - Artist2",
+      album: "playlist - Album2",
+      id: 4
+    },
+  ])
+
+  function addTrack(track) {
+    const currentTrack = playlistTracks.find((item) => item.id === track.id)
+    const newTrack = playlistTracks.concat(track)
+    currentTrack ? console.log("Track has been already added to the Playlist.") : setPlaylistTracks(newTrack)
+  }
+
+  function removeTrack(track) {
+    const tracksNotToRemove = playlistTracks.filter((item) => item.id !== track.id)
+    setPlaylistTracks(tracksNotToRemove)
+  }
+
+  function updatePlaylistName(name) {
+    setPlaylistName(name)
+  }
 
   return (
   
@@ -39,13 +70,17 @@ function App() {
       <div className={styles.Mainbox}>
         <div className={styles["App-SearchResults"]}>
           <p>Search results:</p>
-          <SearchResults userSearchResults={searchResults}/>
+          <SearchResults userSearchResults={searchResults} onAdd={addTrack}/>
         </div>
 
         <div className={styles["App-Playlist"]}>
           <p>
             Playlist:
-            <Playlist />
+            <Playlist 
+              playlistName={playlistName} 
+              playlistTracks={playlistTracks} 
+              onRemove={removeTrack}
+              onNameChange={updatePlaylistName}/>
           </p>
         </div>
       </div>

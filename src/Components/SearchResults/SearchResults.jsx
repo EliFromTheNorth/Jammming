@@ -8,7 +8,7 @@ export default function SearchResults(props) {
     return (
         <div className={styles["Search-Results"]}>
             SearchResults
-            <Tracklist userSearchResults={props.userSearchResults}/>
+            <Tracklist userSearchResults={props.userSearchResults} isRemoval={false} onAdd={props.onAdd}/>
         </div>
     )
 }

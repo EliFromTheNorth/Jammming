@@ -1,7 +1,8 @@
 .Playlist {
     color: brown;
     border: 1px solid brown;
-    width: 150px;
+    width: 450px;
     text-align: center;
     margin: 0 auto;
+    background-color: rgba(236, 125, 55, 0.464);
 }
