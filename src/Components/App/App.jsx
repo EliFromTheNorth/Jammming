@@ -56,6 +56,10 @@ function App() {
     const trackURIs = playlistTracks.map((track) => track.uri)
   }
 
+  function search(term) {
+    console.log(term)
+  }
+
   return (
   
     <div className={styles.App}>
@@ -66,7 +70,7 @@ function App() {
 
       <div className={styles["App-Bar"]}>
         <p>
-          <SearchBar />
+          <SearchBar onSearch={search}/>
         </p>
       </div>
 
