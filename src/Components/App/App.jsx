@@ -51,6 +51,10 @@ function App() {
   function updatePlaylistName(name) {
     setPlaylistName(name)
   }
+  
+  function savePlaylist() {
+    const trackURIs = playlistTracks.map((track) => track.uri)
+  }
 
   return (
   
@@ -80,7 +84,8 @@ function App() {
               playlistName={playlistName} 
               playlistTracks={playlistTracks} 
               onRemove={removeTrack}
-              onNameChange={updatePlaylistName}/>
+              onNameChange={updatePlaylistName}
+              onSave={savePlaylist}/>
           </p>
         </div>
       </div>

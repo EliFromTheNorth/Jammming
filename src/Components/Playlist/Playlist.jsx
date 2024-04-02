@@ -18,7 +18,7 @@ export default function Playlist(props) {
                 isRemoval={true}
                 />
             </div>
-            <button>save to spotify</button>
+            <button onClick={props.onSave}>save to spotify</button>
         </div>
     )
 }
