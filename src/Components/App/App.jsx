@@ -3,7 +3,7 @@ import styles from './App.module.css';
 import SearchBar from '../SearchBar/SearchBar';
 import Playlist from '../Playlist/Playlist';
 import SearchResults from '../SearchResults/SearchResults';
-
+import {Spotify} from '../../util/Spotify/Spotify.js';
 
 function App() {
   const [searchResults, setSearchResults] = React.useState([
@@ -57,6 +57,7 @@ function App() {
   }
 
   function search(term) {
+    Spotify.search(term).then((result) => setSearchResults(result));
     console.log(term)
   }
 
