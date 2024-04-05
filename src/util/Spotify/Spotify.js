@@ -45,7 +45,7 @@ const Spotify = {
              })
         },
 
-    saveplaylist(name, uris) {
+    savePlaylist(name, uris) {
         if (!name || !uris) return
         const accessTokenSavePlaylist = Spotify.getAccessToken()
         const header = { Authorization: `Bearer ${accessTokenSavePlaylist}`}
